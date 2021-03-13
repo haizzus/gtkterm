@@ -51,6 +51,11 @@ GTKTerm has a few dependencies-
 * intltool (version 0.40.0 or higher)
 * libgudev (version 229 or higher)
 
+#### For Ubuntu 20.04
+```bash
+sudo apt install libgudev-1.0-dev libgtk-3-dev libvte-2.91-dev intltool meson
+```
+
 Once these dependencies are installed, most people should simply run:
 
 	meson build
