@@ -108,6 +108,13 @@ void logging_start(GtkAction *action, gpointer data)
 	toggle_logging_pause_resume(Logging);
 }
 
+void logging_start_auto(gchar *filename)
+{
+	OpenLogFile(filename);
+	toggle_logging_sensitivity(Logging);
+	toggle_logging_pause_resume(Logging);
+}
+
 void logging_clear(void)
 {
 	if(LoggingFile == NULL)

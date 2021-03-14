@@ -74,6 +74,7 @@ int read_command_line(int argc, char **argv, gchar *configuration_to_read)
 		{"flow", 1, 0, 'w'},
 		{"delay", 1, 0, 'd'},
 		{"char", 1, 0, 'r'},
+		{"log", 1, 0, 'l'},
 		{"help", 0, 0, 'h'},
 		{"echo", 0, 0, 'e'},
 		{"disable-port-lock", 0, 0, 'L'},
@@ -88,7 +89,7 @@ int read_command_line(int argc, char **argv, gchar *configuration_to_read)
 
 	while(1)
 	{
-		c = getopt_long (argc, argv, "s:a:t:b:f:p:w:d:r:heLc:x:y:", long_options, &option_index);
+		c = getopt_long (argc, argv, "s:a:t:b:f:p:w:d:r:l:heLc:x:y:", long_options, &option_index);
 
 		if(c == -1)
 			break;
@@ -97,6 +98,10 @@ int read_command_line(int argc, char **argv, gchar *configuration_to_read)
 		{
 		case 'c':
 			Load_configuration_from_file(optarg);
+			break;
+
+		case 'l':
+			logging_start_auto(optarg);
 			break;
 
 		case 's':

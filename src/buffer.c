@@ -83,7 +83,7 @@ unsigned int insert_timestamp(char *buffer)
 		strcpy(buffer, buf);
 		size = strlen(buf);
 	}
-  return size;
+	return size;
 }
 
 void put_chars(const char *chars, unsigned int size, gboolean crlf_auto)
@@ -100,7 +100,7 @@ void put_chars(const char *chars, unsigned int size, gboolean crlf_auto)
 
 		for (i=0; i<size; i++)
 		{
-      if(crlf_auto)
+			if(crlf_auto)
 			{
 				if (chars[i] == '\r')
 				{

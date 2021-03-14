@@ -19,5 +19,6 @@ void logging_pause_resume(void);
 void logging_stop(void);
 void logging_clear(void);
 void log_chars(gchar *chars, guint size);
+void logging_start_auto(gchar *filename);
 
 #endif /* LOGGING_H_ */
